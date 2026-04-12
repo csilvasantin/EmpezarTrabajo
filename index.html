@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmpezarTrabajo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6efe4;
+      --teal: #167c80;
+      --red: #af3c2d;
+      --ink: #1e1f1f;
+      --muted: #60594f;
+      --line: rgba(65,54,37,0.14);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      max-width: 560px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle {
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 1.5rem 0;
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .steps {
+      list-style: none;
+      counter-reset: step;
+      margin: 1rem 0;
+    }
+    .steps li {
+      counter-increment: step;
+      padding: 0.4rem 0;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .steps li::before {
+      content: counter(step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--teal);
+      color: var(--bg);
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-right: 0.6rem;
+      vertical-align: middle;
+    }
+    code {
+      background: rgba(65,54,37,0.08);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    .link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--teal);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .link:hover {
+      border-bottom-color: var(--teal);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>EmpezarTrabajo</h1>
+    <div class="subtitle">Arranque rapido de sesion</div>
+    <hr>
+    <p>
+      Script de inicio que prepara el entorno de trabajo de forma consistente:
+      comprueba GitHub CLI, asegura autenticacion, clona o actualiza
+      <em>onboarding</em> y sincroniza los repos habituales.
+    </p>
+    <p>Evita que cada sesion empiece desde cero.</p>
+    <ol class="steps">
+      <li>Ejecutar <code>./start_work.sh</code></li>
+      <li>Abrir <em>onboarding</em> y pedir <code>haz onboarding</code></li>
+      <li>Continuar con el repo de trabajo activo</li>
+    </ol>
+    <hr>
+    <a class="link" href="https://github.com/csilvasantin/EmpezarTrabajo">Ver en GitHub &rarr;</a>
+  </div>
+</body>
+</html>
